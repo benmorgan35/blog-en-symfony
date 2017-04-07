@@ -1,0 +1,22 @@
+{# src/BG/BlogBundle/Resources/views/Billet/edit.html.twig#}
+
+
+{% extends "BGBlogBundle::layout.html.twig" %}
+
+{% block title %}
+    Modifier un épisode - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+ {{ include ('BGBlogBundle:Billet:form.html.twig') }}
+
+
+<p>
+    <a href=""{{ path('bg_blog_view', {'id':billet.id}) }} class="btn btn-default">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Retour à l'épisode
+    </a>
+</p>
+
+{% endblock %}

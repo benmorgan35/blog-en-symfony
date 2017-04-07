@@ -1,0 +1,4 @@
+services:
+#    bg_blog.example:
+#        class: BG\BlogBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

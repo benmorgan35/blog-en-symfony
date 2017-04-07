@@ -1,0 +1,17 @@
+{#src/BG/BlogBundle/Resources/views/Billet/add.html.twig#}
+
+{% extends "BGBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+<h1>Ajouter un épisode</h1>
+
+<div class="well">
+    {{ form(form) }}
+</div>
+
+<p>
+    Attention. Cet épisode sera publié directement après validation du formulaire.
+</p>
+
+{% endblock %}

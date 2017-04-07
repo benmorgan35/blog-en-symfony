@@ -1,0 +1,27 @@
+{% extends "BGBlogBundle::layout.html.twig" %}
+
+{% block title %}
+    Supprimer un épisode - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <h2>Supprimer un épisode</h2>
+
+    <p>
+        Etes-vous certain de vouloir supprimer l'épisode "{{ billet.title }}" ?
+    </p>
+
+    {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+    <form action="{{ path('bg_blog_delete', {'id': billet.id}) }}" method="post">
+        <a href="{{ path('bg_blog_view', {'id': billet.id}) }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à l'épisode
+        </a>
+
+        <input type="submit" value="Supprimer" class="btn btn-danger" />
+        {# Ceci va générer le champ CSRF #}
+        {{ form_rest(form) }}
+    </form>
+
+{% endblock %}

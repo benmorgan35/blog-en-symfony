@@ -1,0 +1,10 @@
+
+<ul class="nav nav-pills nav-stacked">
+    {% for billet in listBillets %}
+        <li>
+            <a href="{{ path('bg_blog_view', {'id': billet.id}) }}">
+                Lire le dernier épisode
+            </a>
+        </li>
+    {% endfor %}
+</ul>

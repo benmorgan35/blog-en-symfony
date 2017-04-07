@@ -1,0 +1,34 @@
+# src/BG/BlogBundle/Resources/config/routing.yml
+
+bg_blog_home:
+    path:    /
+    defaults:
+        _controller: BGBlogBundle:Billet:index
+
+bg_blog_view:
+    path:    /billet/{id}
+    defaults:
+        _controller: BGBlogBundle:Billet:view
+    requirements:
+        id:  \d+
+
+bg_blog_add:
+    path:    /add
+    defaults:
+        _controller: BGBlogBundle:Billet:add
+
+bg_blog_edit:
+    path:    /edit/{id}
+    defaults:
+        _controller: BGBlogBundle:Billet:edit
+    requirements:
+        id:  \d+
+
+bg_blog_delete:
+    path:    /delete/{id}
+    defaults:
+        _controller: BGBlogBundle:Billet:delete
+    requirements:
+        id:  \d+
+
+

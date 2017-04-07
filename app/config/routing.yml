@@ -1,0 +1,5 @@
+bg_blog:
+    resource: "@BGBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+
